@@ -883,6 +883,19 @@ p {
   text-transform: uppercase;
 }
 
+.contact-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.contact-icon {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+  color: var(--accent);
+}
+
 .contact-links strong {
   overflow-wrap: anywhere;
   font-size: 0.75rem;
@@ -1603,7 +1616,7 @@ p {
   }
 
   .contact-links a {
-    grid-template-columns: 66px 1fr auto;
+    grid-template-columns: 96px minmax(0, 1fr) auto;
     gap: 0.5rem;
   }
 
