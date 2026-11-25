@@ -860,48 +860,36 @@ p {
 }
 
 .contact-links {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.65rem;
   align-self: end;
 }
 
-.contact-links .contact-action {
+.contact-links a {
   display: grid;
-  min-height: 76px;
-  grid-template-columns: 62px minmax(0, 1fr) auto;
-  gap: 0.55rem;
+  grid-template-columns: 84px 1fr auto;
+  gap: 0.8rem;
   align-items: center;
-  padding: 0.75rem;
-  border: 1px solid var(--line-strong);
-  background: var(--surface);
-  transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
 }
 
-.contact-links .contact-action:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
-  background: var(--surface-hover);
+.contact-links a:first-child {
+  border-top: 1px solid var(--line);
 }
 
-.contact-links .contact-social {
-  border-color: var(--accent);
-}
-
-.contact-links .contact-action > span:first-child {
+.contact-links a > span:first-child {
   color: var(--quiet);
   font: 0.59rem/1.4 var(--mono);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-.contact-links .contact-action strong {
+.contact-links strong {
   overflow-wrap: anywhere;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 550;
 }
 
-.contact-links .contact-action > span:last-child {
+.contact-links a > span:last-child {
   color: var(--accent);
   font-size: 0.85rem;
 }
@@ -1614,14 +1602,9 @@ p {
     padding-inline: 1rem;
   }
 
-  .contact-links {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-links .contact-action {
-    min-height: 68px;
-    grid-template-columns: 72px minmax(0, 1fr) auto;
-    gap: 0.55rem;
+  .contact-links a {
+    grid-template-columns: 66px 1fr auto;
+    gap: 0.5rem;
   }
 
   .site-footer {
