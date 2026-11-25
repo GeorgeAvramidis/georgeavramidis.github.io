@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151a17">
+  <meta name="description" content="An information theory based Python solver for LoLdle that ranks guesses by entropy and expected remaining candidates.">
+  <title>LoLdle Information Gain Solver | George Avramidis</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="George Avramidis home"><span class="brand-mark">GA</span><span class="brand-name">George Avramidis<span>Data Analyst</span></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="../index.html#services">What I do</a><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a><a class="nav-cv" href="../assets/George_Avramidis_CV.pdf" target="_blank" rel="noopener">CV <span aria-hidden="true">↗</span></a></nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button>
+  </header>
+  <main id="main" class="case-page">
+    <div class="case-crumb page-wrap"><a href="../index.html#projects">← All projects</a><span>Case study 04 / 04</span></div>
+    <section class="case-hero page-wrap">
+      <div class="case-title-block reveal">
+        <p class="eyebrow">Applied analysis · Information theory</p>
+        <h1>LoLdle information<br><span>gain solver</span></h1>
+        <p class="case-deck">An interactive Python solver that treats each guess as a way to reduce uncertainty, plus an automated dataset builder and a notebook exploring champion attributes.</p>
+        <div class="hero-actions"><a class="button button-primary" href="https://github.com/GeorgeAvramidis/loldle-solver" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a><a class="text-link" href="../index.html#contact">Get in touch</a></div>
+      </div>
+      <figure class="case-cover reveal"><img src="../assets/projects/loldle/entropy-vs-candidates.png" alt="Scatter plot comparing information entropy and expected remaining candidates for solver guesses"><figcaption>Information gain and expected candidate count</figcaption></figure>
+    </section>
+    <div class="case-facts page-wrap reveal">
+      <div><span>Question</span><strong>Which guess reduces uncertainty?</strong></div><div><span>Data</span><strong>LoLdle champion attributes</strong></div><div><span>Methods</span><strong>Entropy · Feedback simulation</strong></div><div><span>Toolkit</span><strong>Python · NumPy · Pandas</strong></div>
+    </div>
+    <div class="case-layout page-wrap">
+      <aside class="case-sidebar"><p class="detail-label">On this page</p><a href="#question">Business question</a><a href="#dataset">Dataset</a><a href="#method">Methodology</a><a href="#visuals">Visuals</a><a href="#findings">Findings &amp; recommendations</a><a class="sidebar-github" href="https://github.com/GeorgeAvramidis/loldle-solver" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a></aside>
+      <div class="case-content">
+        <section class="case-section" id="question"><p class="eyebrow">01 / The question</p><h2>Can a guess be chosen for the information it reveals?</h2><p>LoLdle gives feedback about a hidden champion after each guess. This project turns that feedback loop into a decision problem, ranking guesses by how well they split the possible answers instead of relying on trial and error.</p></section>
+        <section class="case-section" id="dataset"><p class="eyebrow">02 / The dataset</p><h2>Champion attributes become clues.</h2><p>A dataset builder retrieves champion information used by the game and prepares a current dataset. The analysis includes attributes such as gender, positions, species, region, resource type and release year.</p></section>
+        <section class="case-section" id="method"><p class="eyebrow">03 / The workflow</p><h2>Score the guesses, then use the feedback.</h2><ol class="method-list">
+          <li><span>01</span><div><strong>Simulate outcomes</strong><p>For each candidate guess, model the feedback patterns it could produce.</p></div></li>
+          <li><span>02</span><div><strong>Measure information</strong><p>Calculate entropy across possible feedback patterns and the expected number of candidates left.</p></div></li>
+          <li><span>03</span><div><strong>Choose and narrow</strong><p>Start with a high entropy guess, record the game's feedback, then filter the candidate set and rank the next choices.</p></div></li>
+          <li><span>04</span><div><strong>Explore the dataset</strong><p>A Jupyter notebook and plots examine champion attributes and how candidate rankings behave.</p></div></li>
+        </ol></section>
+        <section class="case-section" id="visuals"><p class="eyebrow">04 / The visuals</p><h2>Solver demo and analytical plots.</h2><div class="visual-grid">
+          <figure class="visual-card visual-wide"><img src="../assets/projects/loldle/demo.gif" alt="Animated demonstration of the interactive LoLdle solver" loading="lazy"><figcaption>Interactive solver demonstration</figcaption></figure>
+          <figure class="visual-card"><img src="../assets/projects/loldle/solver-interface.png" alt="LoLdle game interface used as the input for the solver" loading="lazy"><figcaption>Game interface</figcaption></figure>
+          <figure class="visual-card"><img src="../assets/projects/loldle/entropy-vs-candidates.png" alt="Entropy against expected remaining candidates" loading="lazy"><figcaption>Entropy and expected candidates</figcaption></figure>
+          <figure class="visual-card"><img src="../assets/projects/loldle/entropy-distribution.png" alt="Distribution of guess entropy scores" loading="lazy"><figcaption>Entropy distribution</figcaption></figure>
+          <figure class="visual-card"><img src="../assets/projects/loldle/top-bottom-guesses.png" alt="Comparison of highly ranked and low ranked guesses" loading="lazy"><figcaption>Guess ranking comparison</figcaption></figure>
+          <figure class="visual-card"><img src="../assets/projects/loldle/release-timeline-entropy.png" alt="Champion release timeline with entropy midpoint analysis" loading="lazy"><figcaption>Release timeline and entropy</figcaption></figure>
+          <figure class="visual-card"><img src="../assets/projects/loldle/champion-gender.png" alt="Champion gender distribution" loading="lazy"><figcaption>Gender distribution</figcaption></figure>
+          <figure class="visual-card"><img src="../assets/projects/loldle/champion-position.png" alt="Champion position distribution" loading="lazy"><figcaption>Position distribution</figcaption></figure>
+          <figure class="visual-card"><img src="../assets/projects/loldle/champion-species.png" alt="Champion species distribution" loading="lazy"><figcaption>Species distribution</figcaption></figure>
+          <figure class="visual-card"><img src="../assets/projects/loldle/region.png" alt="Champion region distribution" loading="lazy"><figcaption>Region distribution</figcaption></figure>
+          <figure class="visual-card"><img src="../assets/projects/loldle/region-overlap.png" alt="Heatmap showing overlap between champion regions" loading="lazy"><figcaption>Region overlap</figcaption></figure>
+          <figure class="visual-card"><img src="../assets/projects/loldle/resource.png" alt="Champion resource type distribution" loading="lazy"><figcaption>Resource types</figcaption></figure>
+          <figure class="visual-card"><img src="../assets/projects/loldle/range-type.png" alt="Champion range type distribution" loading="lazy"><figcaption>Range types</figcaption></figure>
+          <figure class="visual-card"><img src="../assets/projects/loldle/release-year.png" alt="Champion counts by release year" loading="lazy"><figcaption>Release years</figcaption></figure>
+        </div></section>
+        <section class="case-section" id="findings"><p class="eyebrow">05 / Findings &amp; recommendations</p><h2>Use the clues to narrow the search systematically.</h2><p>The solver's decision rule prioritizes information gain for the initial guess, then uses expected remaining candidates to rank choices after feedback. The project documentation does not report a measured average guess count, so no performance claim is included here.</p>
+          <div class="insight-box"><h3>Recommended use</h3><p>Keep the feedback categories consistent with the game, refresh the champion dataset as the game changes and use both entropy and expected candidates when evaluating a guess. Entropy describes the potential information in a split, while expected candidates describes the remaining search size.</p></div>
+        </section>
+        <div class="case-end-links"><a href="https://github.com/GeorgeAvramidis/loldle-solver" target="_blank" rel="noopener noreferrer">Source code, notebook and dataset <span aria-hidden="true">↗</span></a><a href="../index.html#projects">Back to all projects <span aria-hidden="true">↑</span></a></div>
+      </div>
+    </div>
+    <section class="case-next page-wrap"><span>Back to the portfolio</span><a href="../index.html#projects">Explore all projects <b aria-hidden="true">↑</b></a></section>
+  </main>
+  <footer class="site-footer page-wrap"><a class="brand brand-footer" href="../index.html"><span class="brand-mark">GA</span><span class="brand-name">George Avramidis<span>Data Analyst</span></span></a><p>Thoughtful analysis. Clear communication.</p><span>© <span data-current-year>2026</span> George Avramidis</span></footer>
+</body>
+</html>

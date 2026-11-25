@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151a17">
+  <meta name="description" content="A Python, Pandas, PostgreSQL and Power BI workflow for exploring Eurostat income distribution data across Europe.">
+  <title>European Income Distribution Pipeline | George Avramidis</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="George Avramidis home">
+      <span class="brand-mark">GA</span><span class="brand-name">George Avramidis<span>Data Analyst</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="../index.html#services">What I do</a><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a>
+      <a class="nav-cv" href="../assets/George_Avramidis_CV.pdf" target="_blank" rel="noopener">CV <span aria-hidden="true">↗</span></a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button>
+  </header>
+  <main id="main" class="case-page">
+    <div class="case-crumb page-wrap"><a href="../index.html#projects">← All projects</a><span>Case study 01 / 04</span></div>
+    <section class="case-hero page-wrap">
+      <div class="case-title-block reveal">
+        <p class="eyebrow">Data engineering · Business intelligence</p>
+        <h1>European income<br><span>distribution</span></h1>
+        <p class="case-deck">A complete path from Eurostat data to a structured model, validated SQL and a Power BI report for comparing income across countries and demographic groups.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/GeorgeAvramidis/eurostat-income-pipeline" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="../index.html#contact">Get in touch</a>
+        </div>
+      </div>
+      <figure class="case-cover reveal">
+        <img src="../assets/projects/eurostat/income-trends.png" alt="Interactive income trend chart for countries and European aggregates">
+        <figcaption>Income comparisons across countries and European benchmarks</figcaption>
+      </figure>
+    </section>
+    <div class="case-facts page-wrap reveal">
+      <div><span>Dataset</span><strong>Eurostat EU-SILC</strong></div>
+      <div><span>Coverage</span><strong>1995 to 2025</strong></div>
+      <div><span>Workflow</span><strong>Extract · Model · Explore</strong></div>
+      <div><span>Toolkit</span><strong>Python · SQL · Power BI</strong></div>
+    </div>
+    <div class="case-layout page-wrap">
+      <aside class="case-sidebar">
+        <p class="detail-label">On this page</p>
+        <a href="#question">Business question</a><a href="#dataset">Dataset</a><a href="#method">Methodology</a><a href="#visuals">Visuals</a><a href="#findings">Findings &amp; recommendations</a>
+        <a class="sidebar-github" href="https://github.com/GeorgeAvramidis/eurostat-income-pipeline" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a>
+      </aside>
+      <div class="case-content">
+        <section class="case-section" id="question">
+          <p class="eyebrow">01 / The question</p>
+          <h2>How do income patterns differ across Europe?</h2>
+          <p>Eurostat publishes annual mean and median equivalised income statistics across countries and demographic groups. The project makes those measures easier to compare over time, while keeping differences in age, sex and units visible.</p>
+        </section>
+        <section class="case-section" id="dataset">
+          <p class="eyebrow">02 / The dataset</p>
+          <h2>One source, several ways to compare.</h2>
+          <p>The pipeline uses Eurostat dataset <code>ilc_di03</code>, based on EU Statistics on Income and Living Conditions. It covers annual observations from 1995 to 2025 where available, with values in euros, purchasing power standards and national currency.</p>
+          <a class="inline-source" href="https://ec.europa.eu/eurostat/databrowser/view/ilc_di03/default/table?lang=en" target="_blank" rel="noopener noreferrer">Open the Eurostat dataset <span aria-hidden="true">↗</span></a>
+        </section>
+        <section class="case-section" id="method">
+          <p class="eyebrow">03 / The workflow</p>
+          <h2>From extraction to an interactive report.</h2>
+          <ol class="method-list">
+            <li><span>01</span><div><strong>Extract and transform</strong><p>Python and Pandas prepare the Eurostat records for analysis.</p></div></li>
+            <li><span>02</span><div><strong>Model the data</strong><p>A dimensional star schema organizes income measures alongside country, age, sex, statistic and unit attributes.</p></div></li>
+            <li><span>03</span><div><strong>Validate with SQL</strong><p>PostgreSQL supports data checks and exploratory queries against the modeled tables.</p></div></li>
+            <li><span>04</span><div><strong>Explore in Power BI</strong><p>Interactive filters and visuals support country comparisons, time trends and a European choropleth map.</p></div></li>
+          </ol>
+        </section>
+        <section class="case-section" id="visuals">
+          <p class="eyebrow">04 / The visuals</p>
+          <h2>Explore the report and its building blocks.</h2>
+          <div class="visual-grid">
+            <figure class="visual-card visual-wide"><img src="../assets/projects/eurostat/dashboard-exploration.gif" alt="Animated preview of the interactive Eurostat income dashboard" loading="lazy"><figcaption>Power BI dashboard preview</figcaption></figure>
+            <figure class="visual-card visual-wide"><img src="../assets/projects/eurostat/dashboard-current.png" alt="Current static screenshot of the Eurostat Power BI dashboard" loading="lazy"><figcaption>Latest dashboard layout</figcaption></figure>
+            <figure class="visual-card"><img src="../assets/projects/eurostat/income-trends.png" alt="Multi-line chart comparing income trends across European countries" loading="lazy"><figcaption>Country and European benchmark trends</figcaption></figure>
+            <figure class="visual-card"><img src="../assets/projects/eurostat/income-map.png" alt="European choropleth map showing income by country" loading="lazy"><figcaption>Income by country</figcaption></figure>
+            <figure class="visual-card"><img src="../assets/projects/eurostat/filters.png" alt="Dashboard slicers for selecting country, sex, age, unit, statistic and year" loading="lazy"><figcaption>Filters for demographic and income measures</figcaption></figure>
+            <figure class="visual-card"><img src="../assets/projects/eurostat/map-legend.png" alt="Legend for the dashboard's choropleth map" loading="lazy"><figcaption>Map scale</figcaption></figure>
+          </div>
+        </section>
+        <section class="case-section" id="findings">
+          <p class="eyebrow">05 / Findings &amp; recommendations</p>
+          <h2>A flexible view for comparing like with like.</h2>
+          <p>The project README describes the analysis questions and report features rather than a single published numeric conclusion. The dashboard supports comparison by country, year, age group, sex, income statistic and unit.</p>
+          <div class="insight-box">
+            <h3>Recommended use</h3>
+            <p>Keep the selected statistic and unit consistent when comparing countries. Use purchasing power standards for cross-country comparisons, and review mean alongside median income to see how the typical value differs from the average.</p>
+          </div>
+        </section>
+        <div class="case-end-links"><a href="https://github.com/GeorgeAvramidis/eurostat-income-pipeline" target="_blank" rel="noopener noreferrer">Source code and full documentation <span aria-hidden="true">↗</span></a><a href="../index.html#projects">Back to all projects <span aria-hidden="true">↑</span></a></div>
+      </div>
+    </div>
+    <section class="case-next page-wrap"><span>Next case study</span><a href="greece-labour-market.html">Greece labour market <b aria-hidden="true">↗</b></a></section>
+  </main>
+  <footer class="site-footer page-wrap"><a class="brand brand-footer" href="../index.html"><span class="brand-mark">GA</span><span class="brand-name">George Avramidis<span>Data Analyst</span></span></a><p>Thoughtful analysis. Clear communication.</p><span>© <span data-current-year>2026</span> George Avramidis</span></footer>
+</body>
+</html>

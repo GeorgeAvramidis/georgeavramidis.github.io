@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151a17">
+  <meta name="description" content="Regional Power BI analysis of new building activity in Greece in 2025 using cleaned ELSTAT data.">
+  <title>Construction Activity in Greece | George Avramidis</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="George Avramidis home"><span class="brand-mark">GA</span><span class="brand-name">George Avramidis<span>Data Analyst</span></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="../index.html#services">What I do</a><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a><a class="nav-cv" href="../assets/George_Avramidis_CV.pdf" target="_blank" rel="noopener">CV <span aria-hidden="true">↗</span></a></nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme"><svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg></button>
+  </header>
+  <main id="main" class="case-page">
+    <div class="case-crumb page-wrap"><a href="../index.html#projects">← All projects</a><span>Case study 03 / 04</span></div>
+    <section class="case-hero page-wrap">
+      <div class="case-title-block reveal">
+        <p class="eyebrow">Regional analysis · Dashboard development</p>
+        <h1>Construction<br><span>activity in Greece</span></h1>
+        <p class="case-deck">An interactive Power BI dashboard for comparing new building activity across Greek regions and regional units using cleaned ELSTAT data.</p>
+        <div class="hero-actions"><a class="button button-primary" href="https://github.com/GeorgeAvramidis/greece-construction-analysis" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a><a class="text-link" href="../index.html#contact">Get in touch</a></div>
+      </div>
+      <figure class="case-cover reveal"><img src="../assets/projects/construction/regions-dashboard.png" alt="Power BI map and KPI overview of construction activity by region in Greece"><figcaption>Regional view of new building activity in 2025</figcaption></figure>
+    </section>
+    <div class="case-facts page-wrap reveal">
+      <div><span>Source</span><strong>ELSTAT</strong></div><div><span>Period</span><strong>January to December 2025</strong></div><div><span>Geography</span><strong>Regions and regional units</strong></div><div><span>Toolkit</span><strong>Excel · Power BI · DAX</strong></div>
+    </div>
+    <div class="case-layout page-wrap">
+      <aside class="case-sidebar"><p class="detail-label">On this page</p><a href="#question">Business question</a><a href="#dataset">Dataset</a><a href="#method">Methodology</a><a href="#visuals">Visuals</a><a href="#findings">Findings &amp; recommendations</a><a class="sidebar-github" href="https://github.com/GeorgeAvramidis/greece-construction-analysis" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a></aside>
+      <div class="case-content">
+        <section class="case-section" id="question"><p class="eyebrow">01 / The question</p><h2>Where was new building activity concentrated?</h2><p>ELSTAT's construction statistics can be difficult to compare across administrative areas when source tables are not shaped for analysis. This report brings several measures together so regional patterns are easier to explore.</p></section>
+        <section class="case-section" id="dataset"><p class="eyebrow">02 / The dataset</p><h2>Four measures, two geographic levels.</h2><p>The analysis uses ELSTAT data on new building activity from January to December 2025. It compares building counts, storeys, total building volume and total surface area at both the regional and regional unit levels.</p><a class="inline-source" href="https://www.statistics.gr/" target="_blank" rel="noopener noreferrer">Open the ELSTAT website <span aria-hidden="true">↗</span></a></section>
+        <section class="case-section" id="method"><p class="eyebrow">03 / The workflow</p><h2>Prepare once, compare consistently.</h2><ol class="method-list">
+          <li><span>01</span><div><strong>Clean and structure</strong><p>Excel transforms ELSTAT source tables into a consistent dataset for reporting.</p></div></li>
+          <li><span>02</span><div><strong>Model the measures</strong><p>Power BI organizes indicators and geography so totals are compared at the appropriate level.</p></div></li>
+          <li><span>03</span><div><strong>Design the report</strong><p>DAX measures, dynamic labels and interactive selectors support focused comparisons.</p></div></li>
+          <li><span>04</span><div><strong>Map the regions</strong><p>Custom TopoJSON supports a shape map alongside charts and ranked tables.</p></div></li>
+        </ol></section>
+        <section class="case-section" id="visuals"><p class="eyebrow">04 / The visuals</p><h2>From regional overview to dashboard detail.</h2>
+          <div class="visual-grid">
+            <figure class="visual-card visual-wide"><img src="../assets/projects/construction/regions-dashboard.png" alt="Full dashboard view comparing construction measures across Greek regions" loading="lazy"><figcaption>Regional overview</figcaption></figure>
+            <figure class="visual-card visual-wide"><img src="../assets/projects/construction/regional-units-dashboard.png" alt="Full dashboard view of construction measures by regional unit" loading="lazy"><figcaption>Regional unit comparison</figcaption></figure>
+            <figure class="visual-card"><img src="../assets/projects/construction/map-visual.png" alt="Dashboard map visual for Greek regions" loading="lazy"><figcaption>Geographic view</figcaption></figure>
+            <figure class="visual-card"><img src="../assets/projects/construction/bar-chart.png" alt="Bar chart visual comparing construction measures" loading="lazy"><figcaption>Ranked comparison</figcaption></figure>
+            <figure class="visual-card"><img src="../assets/projects/construction/scatterplot.png" alt="Scatter plot visual for regional construction measures" loading="lazy"><figcaption>Compare two measures</figcaption></figure>
+            <figure class="visual-card"><img src="../assets/projects/construction/treemap.png" alt="Treemap visual for construction activity" loading="lazy"><figcaption>Composition by area</figcaption></figure>
+            <figure class="visual-card"><img src="../assets/projects/construction/kpi-visual.png" alt="KPI cards for construction activity" loading="lazy"><figcaption>Headline measures</figcaption></figure>
+            <figure class="visual-card"><img src="../assets/projects/construction/region-slicer.png" alt="Dashboard region selector" loading="lazy"><figcaption>Region selector</figcaption></figure>
+            <figure class="visual-card"><img src="../assets/projects/construction/metric-slicer.png" alt="Dashboard metric selector" loading="lazy"><figcaption>Metric selector</figcaption></figure>
+            <figure class="visual-card"><img src="../assets/projects/construction/source-table.png" alt="Original ELSTAT construction statistics table" loading="lazy"><figcaption>Source data layout</figcaption></figure>
+            <figure class="visual-card"><img src="../assets/projects/construction/clean-table.png" alt="Cleaned construction analysis table" loading="lazy"><figcaption>Analysis ready data</figcaption></figure>
+          </div>
+          <div class="icon-strip" aria-label="Four KPI icon illustrations used in the project">
+            <img src="../assets/projects/construction/icon-buildings.png" alt="Buildings KPI icon" loading="lazy"><img src="../assets/projects/construction/icon-floors.png" alt="Storeys KPI icon" loading="lazy"><img src="../assets/projects/construction/icon-surface.png" alt="Surface area KPI icon" loading="lazy"><img src="../assets/projects/construction/icon-volume.png" alt="Building volume KPI icon" loading="lazy">
+          </div>
+        </section>
+        <section class="case-section" id="findings"><p class="eyebrow">05 / Findings &amp; recommendations</p><h2>Attica led the regional totals.</h2>
+          <div class="metric-pair metric-triple"><div><strong>11,650</strong><span>New buildings across Greece in 2025</span></div><div><strong>4.73M m²</strong><span>Total building surface area</span></div><div><strong>20.61M m³</strong><span>Total building volume</span></div></div>
+          <p>Attica accounted for 18.3% of new buildings and 27.9% of total surface area nationwide. Among regional units, East Attica led in building count and storeys, while Thessaloniki led in surface area and volume.</p>
+          <div class="insight-box"><h3>Recommended interpretation</h3><p>These are absolute totals, not population adjusted rates. Use totals to understand scale, and add a relevant denominator before comparing construction intensity between areas. A multi year series would help check whether the 2025 pattern continues.</p></div>
+        </section>
+        <div class="case-end-links"><a href="https://github.com/GeorgeAvramidis/greece-construction-analysis" target="_blank" rel="noopener noreferrer">Source data and full documentation <span aria-hidden="true">↗</span></a><a href="../index.html#projects">Back to all projects <span aria-hidden="true">↑</span></a></div>
+      </div>
+    </div>
+    <section class="case-next page-wrap"><span>Next case study</span><a href="loldle-solver.html">LoLdle information gain solver <b aria-hidden="true">↗</b></a></section>
+  </main>
+  <footer class="site-footer page-wrap"><a class="brand brand-footer" href="../index.html"><span class="brand-mark">GA</span><span class="brand-name">George Avramidis<span>Data Analyst</span></span></a><p>Thoughtful analysis. Clear communication.</p><span>© <span data-current-year>2026</span> George Avramidis</span></footer>
+</body>
+</html>
