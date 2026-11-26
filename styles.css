@@ -169,7 +169,7 @@ img {
 
 .site-nav a {
   color: var(--muted);
-  font-size: 0.84rem;
+  font-size: 1rem;
   transition: color 140ms ease;
 }
 
@@ -196,8 +196,8 @@ img {
 }
 
 .theme-icon {
-  width: 17px;
-  height: 17px;
+  width: 22px;
+  height: 22px;
   fill: none;
   stroke: var(--text);
   stroke-linecap: round;
