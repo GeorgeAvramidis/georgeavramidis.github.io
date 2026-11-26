@@ -724,10 +724,11 @@ p {
 }
 
 .section-about {
+  --about-spacing: clamp(1.5rem, 3vw, 2.5rem);
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   column-gap: clamp(2rem, 7vw, 7rem);
-  row-gap: clamp(1.5rem, 3vw, 2.5rem);
+  row-gap: var(--about-spacing);
 }
 
 .about-intro h2 {
@@ -775,7 +776,7 @@ p {
   grid-template-columns: 0.82fr 1.18fr;
   gap: 2rem;
   margin-top: 0;
-  padding-top: 1.25rem;
+  padding-top: var(--about-spacing);
   border-top: 1px solid var(--line-strong);
 }
 
@@ -799,6 +800,10 @@ p {
   max-width: 400px;
   margin-top: 0.6rem;
   line-height: 1.6;
+}
+
+.detail-block > .detail-note {
+  margin-bottom: 0;
 }
 
 .credential-list {
@@ -1628,8 +1633,9 @@ p {
   }
 
   .section-about {
+    --about-spacing: 1.2rem;
     grid-template-columns: 1fr;
-    gap: 1.2rem;
+    gap: var(--about-spacing);
   }
 
   .about-copy {
@@ -1641,10 +1647,6 @@ p {
     grid-column: 1;
     grid-template-columns: 1fr;
     gap: 1.25rem;
-  }
-
-  .about-details {
-    margin-top: 0.75rem;
   }
 
   .skills-strip {
