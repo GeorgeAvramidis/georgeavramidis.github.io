@@ -463,11 +463,13 @@ p {
 .services-heading .eyebrow {
   margin-bottom: 0.9rem;
   padding-top: 0;
+  font-size: 12px;
 }
 
 .services-heading .section-lead {
   grid-column: auto;
   margin: 0.9rem 0 0;
+  font-size: 20px;
 }
 
 .section-heading h2,
@@ -518,7 +520,7 @@ p {
 .service-card h3 {
   min-height: 4rem;
   margin: 2.1rem 0 0.85rem;
-  font-size: clamp(1.2rem, 1.55vw, 1.42rem);
+  font-size: 30px;
   font-weight: 600;
   line-height: 1.35;
   letter-spacing: -0.035em;
@@ -529,14 +531,14 @@ p {
   min-height: 7rem;
   margin-bottom: 1.2rem;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 20px;
   line-height: 1.7;
 }
 
 .service-tools {
   display: inline-block;
   color: var(--quiet);
-  font: 0.7rem/1.5 var(--mono);
+  font: 14px/1.5 var(--mono);
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
