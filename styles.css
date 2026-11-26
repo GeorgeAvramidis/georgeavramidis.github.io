@@ -745,7 +745,7 @@ p {
 @media (min-width: 681px) {
   .about-copy {
     width: calc(100% + 10px);
-    max-width: 530px;
+    max-width: none;
     margin-left: -10px;
   }
 }
