@@ -536,9 +536,17 @@ p {
 }
 
 .section-projects {
+  position: relative;
   background: var(--bg-soft);
   padding-inline: clamp(1rem, 4vw, 3.4rem);
-  scroll-margin-top: calc(0px - var(--anchor-offset));
+}
+
+.projects-scroll-target {
+  position: absolute;
+  top: calc(var(--anchor-offset) - 1px);
+  left: 0;
+  width: 1px;
+  height: 1px;
 }
 
 .project-heading {
