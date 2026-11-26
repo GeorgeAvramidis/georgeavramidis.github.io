@@ -467,6 +467,7 @@ p {
 }
 
 .services-heading .section-lead {
+  max-width: 520px;
   grid-column: auto;
   margin: 0.9rem 0 0;
   font-size: 20px;
