@@ -739,6 +739,15 @@ p {
 .about-copy {
   max-width: 520px;
   padding-top: 2.3rem;
+  text-align: left;
+}
+
+@media (min-width: 681px) {
+  .about-copy {
+    width: calc(100% + 10px);
+    max-width: 530px;
+    margin-left: -10px;
+  }
 }
 
 .about-copy p {
@@ -751,6 +760,7 @@ p {
 .about-copy .text-link {
   display: inline-block;
   margin-top: 0.35rem;
+  margin-left: 0;
   font-size: 1rem;
 }
 
