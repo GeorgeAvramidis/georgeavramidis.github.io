@@ -730,13 +730,19 @@ p {
 .about-copy p {
   margin-bottom: 1rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.85;
 }
 
 .about-copy .text-link {
   display: inline-block;
   margin-top: 0.7rem;
+  font-size: 1rem;
+}
+
+.section-about .eyebrow,
+.section-about .detail-label {
+  font-size: 0.75rem;
 }
 
 .about-details {
@@ -751,13 +757,13 @@ p {
 
 .detail-block h3 {
   margin: 1.1rem 0 0.4rem;
-  font: 500 1.45rem/1.2 var(--display);
+  font: 500 1.55rem/1.2 var(--display);
 }
 
 .detail-block > p:not(.detail-label) {
   margin-bottom: 0.5rem;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .detail-block > p > span {
@@ -789,7 +795,7 @@ p {
 }
 
 .credential-list a {
-  font-size: 0.82rem;
+  font-size: 1rem;
 }
 
 .credential-list a:hover {
@@ -803,7 +809,7 @@ p {
 .credential-list small {
   flex: 0 0 auto;
   color: var(--quiet);
-  font: 0.58rem/1.4 var(--mono);
+  font: 0.7rem/1.4 var(--mono);
   text-transform: uppercase;
 }
 
@@ -821,7 +827,7 @@ p {
 .skills-strip h3 {
   max-width: 260px;
   margin: 0.8rem 0 0;
-  font: 500 1.55rem/1.15 var(--display);
+  font: 500 1.65rem/1.15 var(--display);
 }
 
 .skills-columns {
@@ -838,12 +844,12 @@ p {
 
 .skills-columns strong {
   color: var(--text);
-  font-size: 0.78rem;
+  font-size: 1rem;
 }
 
 .skills-columns span {
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 1rem;
   line-height: 1.65;
 }
 
