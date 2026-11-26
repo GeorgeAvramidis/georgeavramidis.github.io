@@ -63,6 +63,22 @@
     });
   }
 
+  document.querySelectorAll("[data-scroll-exact]").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      const target = document.querySelector(link.hash);
+      if (!target) return;
+
+      event.preventDefault();
+      if (window.location.hash !== link.hash) {
+        window.history.pushState(null, "", link.hash);
+      }
+      window.scrollTo({
+        top: window.scrollY + target.getBoundingClientRect().top,
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+      });
+    });
+  });
+
   function setProjectFilter(filter) {
     let visibleCount = 0;
     projectCards.forEach(function (card) {

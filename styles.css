@@ -44,7 +44,7 @@ html[data-theme="light"] {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 0;
+  scroll-padding-top: 5rem;
   background: var(--bg);
 }
 
@@ -570,7 +570,7 @@ p {
   min-height: 37px;
   padding: 0.4rem 0.75rem;
   border: 1px solid var(--line-strong);
-  border-radius: 100px;
+  border-radius: var(--radius);
   background: transparent;
   color: var(--muted);
   cursor: pointer;
@@ -914,6 +914,7 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  margin-top: 14rem;
   border-top: 1px solid var(--line);
 }
 
@@ -1641,6 +1642,7 @@ p {
     min-height: 130px;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin-top: 4rem;
     padding-block: 1.2rem;
   }
 
