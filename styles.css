@@ -19,8 +19,7 @@
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --page-width: 1240px;
   --gutter: clamp(1.25rem, 5.5vw, 5.5rem);
-  --anchor-offset: 5rem;
-  --radius: 3px;
+  --radius: 5px;
 }
 
 html[data-theme="light"] {
@@ -45,7 +44,7 @@ html[data-theme="light"] {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--anchor-offset);
+  scroll-padding-top: 0;
   background: var(--bg);
 }
 
@@ -539,14 +538,6 @@ p {
   position: relative;
   background: var(--bg-soft);
   padding-inline: clamp(1rem, 4vw, 3.4rem);
-}
-
-.projects-scroll-target {
-  position: absolute;
-  top: calc(var(--anchor-offset) - 1px);
-  left: 0;
-  width: 1px;
-  height: 1px;
 }
 
 .project-heading {
@@ -1244,6 +1235,7 @@ p {
 
 .metric-pair {
   display: grid;
+  overflow: hidden;
   grid-template-columns: repeat(2, 1fr);
   gap: 1px;
   margin: 1.7rem 0;
@@ -1277,6 +1269,21 @@ p {
 
 .metric-triple strong {
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+}
+
+.brand-mark,
+.hero-visual,
+.project-card,
+.project-image-label,
+.tag-list span,
+.skills-strip,
+.site-nav,
+.case-cover,
+.visual-card,
+.icon-strip,
+.insight-box,
+.metric-pair {
+  border-radius: var(--radius);
 }
 
 .case-end-links {
