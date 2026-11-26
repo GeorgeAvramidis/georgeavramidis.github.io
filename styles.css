@@ -19,6 +19,7 @@
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --page-width: 1240px;
   --gutter: clamp(1.25rem, 5.5vw, 5.5rem);
+  --contact-spacing: clamp(2rem, 4vw, 3.5rem);
   --radius: 5px;
 }
 
@@ -729,6 +730,7 @@ p {
   grid-template-columns: 0.95fr 1.05fr;
   column-gap: clamp(2rem, 7vw, 7rem);
   row-gap: var(--about-spacing);
+  padding-bottom: var(--contact-spacing);
 }
 
 .about-intro h2 {
@@ -887,12 +889,21 @@ p {
   grid-template-columns: 1fr 0.8fr;
   gap: clamp(2rem, 8vw, 8rem);
   padding-block: clamp(4rem, 8vw, 7.5rem);
+  padding-top: var(--contact-spacing);
   border-top: 1px solid var(--line);
+}
+
+.contact-copy > .eyebrow {
+  font-size: 12px;
 }
 
 .contact-copy h2 {
   max-width: 580px;
   margin: 1rem 0 1.8rem;
+}
+
+.contact-copy .button {
+  font-size: 16px;
 }
 
 .contact-links {
@@ -901,7 +912,7 @@ p {
 
 .contact-links a {
   display: grid;
-  grid-template-columns: 84px 1fr auto;
+  grid-template-columns: 112px minmax(0, 1fr) auto;
   gap: 0.8rem;
   align-items: center;
   padding: 0.8rem 0;
@@ -914,7 +925,7 @@ p {
 
 .contact-links a > span:first-child {
   color: var(--quiet);
-  font: 0.59rem/1.4 var(--mono);
+  font: 14px/1.4 var(--mono);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -926,15 +937,16 @@ p {
 }
 
 .contact-icon {
-  width: 15px;
-  height: 15px;
-  flex: 0 0 15px;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
   color: var(--accent);
 }
 
 .contact-links strong {
   overflow-wrap: anywhere;
-  font-size: 0.75rem;
+  font-size: 14px;
+  line-height: 1.4;
   font-weight: 550;
 }
 
@@ -1636,6 +1648,7 @@ p {
     --about-spacing: 1.2rem;
     grid-template-columns: 1fr;
     gap: var(--about-spacing);
+    padding-bottom: var(--contact-spacing);
   }
 
   .about-copy {
@@ -1662,7 +1675,8 @@ p {
   .contact-panel {
     grid-template-columns: 1fr;
     gap: 2.6rem;
-    padding-block: 4rem;
+    padding-top: var(--contact-spacing);
+    padding-bottom: 4rem;
   }
 
   .section-projects {
@@ -1670,7 +1684,7 @@ p {
   }
 
   .contact-links a {
-    grid-template-columns: 96px minmax(0, 1fr) auto;
+    grid-template-columns: 112px minmax(0, 1fr) auto;
     gap: 0.5rem;
   }
 
