@@ -885,7 +885,7 @@ p {
   gap: clamp(2rem, 8vw, 8rem);
   padding-block: clamp(4rem, 8vw, 7.5rem);
   padding-top: var(--contact-spacing);
-  padding-bottom: 1.5rem;
+  padding-bottom: calc(var(--contact-spacing) + 1.5rem);
   border-top: 1px solid var(--line);
 }
 
@@ -1681,7 +1681,7 @@ p {
     grid-template-columns: 1fr;
     gap: 2.6rem;
     padding-top: var(--contact-spacing);
-    padding-bottom: 1.5rem;
+    padding-bottom: calc(var(--contact-spacing) + 1.5rem);
   }
 
   .section-projects {
