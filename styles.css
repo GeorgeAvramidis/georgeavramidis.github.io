@@ -986,7 +986,7 @@ p {
   padding-block: 0.85rem;
   border-bottom: 1px solid var(--line);
   color: var(--quiet);
-  font: 0.6rem/1.5 var(--mono);
+  font: 12px/1.5 var(--mono);
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
@@ -1017,12 +1017,18 @@ p {
   color: var(--accent);
 }
 
+.case-title-block > .eyebrow,
+.case-section > .eyebrow,
+.case-sidebar .detail-label {
+  font-size: 12px;
+}
+
 .case-deck {
   max-width: 540px;
   margin-bottom: 1.5rem;
   color: var(--muted);
-  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
-  line-height: 1.75;
+  font-size: 20px;
+  line-height: 1.7;
 }
 
 .case-cover {
@@ -1042,7 +1048,7 @@ p {
 .case-cover figcaption {
   padding: 0.65rem 0.25rem 0.15rem;
   color: var(--muted);
-  font-size: 0.66rem;
+  font-size: 14px;
 }
 
 .case-facts {
@@ -1071,13 +1077,13 @@ p {
 
 .case-facts span {
   color: var(--quiet);
-  font: 0.57rem/1.4 var(--mono);
+  font: 12px/1.4 var(--mono);
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
 
 .case-facts strong {
-  font-size: 0.76rem;
+  font-size: 14px;
   font-weight: 560;
 }
 
@@ -1104,7 +1110,7 @@ p {
 
 .case-sidebar a {
   color: var(--muted);
-  font-size: 0.71rem;
+  font-size: 16px;
 }
 
 .case-sidebar a:hover {
@@ -1148,8 +1154,8 @@ p {
 .case-section > p:not(.eyebrow) {
   max-width: 720px;
   color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.85;
+  font-size: 20px;
+  line-height: 1.7;
 }
 
 .case-section code {
@@ -1165,7 +1171,7 @@ p {
   gap: 0.5rem;
   margin-top: 0.4rem;
   color: var(--accent);
-  font-size: 0.76rem;
+  font-size: 16px;
   text-decoration: underline;
   text-decoration-color: var(--line-strong);
   text-underline-offset: 4px;
@@ -1191,18 +1197,18 @@ p {
 .method-list li > span {
   padding-top: 0.1rem;
   color: var(--warm);
-  font: 0.63rem/1.5 var(--mono);
+  font: 14px/1.5 var(--mono);
 }
 
 .method-list strong {
-  font-size: 0.82rem;
+  font-size: 20px;
 }
 
 .method-list p {
   margin: 0.25rem 0 0;
   color: var(--muted);
-  font-size: 0.77rem;
-  line-height: 1.65;
+  font-size: 20px;
+  line-height: 1.7;
 }
 
 .visual-grid {
@@ -1233,7 +1239,7 @@ p {
   padding: 0.6rem 0.7rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 14px;
 }
 
 .visual-wide {
@@ -1277,8 +1283,8 @@ p {
 .insight-box p {
   margin-bottom: 0;
   color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.75;
+  font-size: 20px;
+  line-height: 1.7;
 }
 
 .metric-pair {
@@ -1307,7 +1313,7 @@ p {
 .metric-pair span {
   max-width: 240px;
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 20px;
   line-height: 1.6;
 }
 
@@ -1344,7 +1350,7 @@ p {
 
 .case-end-links a {
   color: var(--accent);
-  font-size: 0.74rem;
+  font-size: 16px;
 }
 
 .case-next {
@@ -1356,7 +1362,7 @@ p {
 
 .case-next > span {
   color: var(--quiet);
-  font: 0.6rem/1.4 var(--mono);
+  font: 12px/1.4 var(--mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -1716,7 +1722,6 @@ p {
 
   .case-crumb {
     margin-top: 91px;
-    font-size: 0.52rem;
   }
 
   .case-hero {
@@ -1770,7 +1775,7 @@ p {
   }
 
   .case-sidebar a {
-    font-size: 0.65rem;
+    font-size: 16px;
   }
 
   .case-sidebar .sidebar-github {
@@ -1794,10 +1799,6 @@ p {
 
   .visual-wide {
     grid-column: auto;
-  }
-
-  .case-facts strong {
-    font-size: 0.69rem;
   }
 }
 

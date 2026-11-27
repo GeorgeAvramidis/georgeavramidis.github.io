@@ -79,6 +79,27 @@
     });
   });
 
+  const homeSectionHashes = new Set(["#what-i-do", "#projects", "#about", "#contact"]);
+
+  function alignHomeSectionHash() {
+    if (!homeSectionHashes.has(window.location.hash)) return;
+    const target = document.querySelector(window.location.hash);
+    if (!target) return;
+
+    const previousScrollBehavior = root.style.scrollBehavior;
+    root.style.scrollBehavior = "auto";
+    window.scrollTo({
+      top: window.scrollY + target.getBoundingClientRect().top,
+      behavior: "auto"
+    });
+    root.style.scrollBehavior = previousScrollBehavior;
+  }
+
+  window.addEventListener("load", function () {
+    window.requestAnimationFrame(alignHomeSectionHash);
+  }, { once: true });
+  window.addEventListener("hashchange", alignHomeSectionHash);
+
   function setProjectFilter(filter) {
     let visibleCount = 0;
     projectCards.forEach(function (card) {
