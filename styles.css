@@ -1684,8 +1684,18 @@ p {
   }
 
   .contact-links a {
-    grid-template-columns: 112px minmax(0, 1fr) auto;
+    grid-template-columns: 92px minmax(0, 1fr) auto;
     gap: 0.5rem;
+  }
+
+  .contact-links a > span:first-child {
+    font-size: 12px;
+  }
+
+  .contact-icon {
+    width: 12px;
+    height: 12px;
+    flex-basis: 12px;
   }
 
   .site-footer {
